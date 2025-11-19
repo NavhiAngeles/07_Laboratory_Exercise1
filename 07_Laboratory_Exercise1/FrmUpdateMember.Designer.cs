@@ -36,13 +36,13 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            StudIDcomboBox = new ComboBox();
+            UPDprogramcomboBox = new ComboBox();
+            UPDGenderComboBox = new ComboBox();
+            UPDLast = new TextBox();
+            UPDFirst = new TextBox();
+            UPDmid = new TextBox();
+            UPDage = new TextBox();
             button1 = new Button();
             SuspendLayout();
             // 
@@ -116,57 +116,58 @@
             label7.TabIndex = 6;
             label7.Text = "Program: ";
             // 
-            // comboBox1
+            // StudIDcomboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(30, 42);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(274, 23);
-            comboBox1.TabIndex = 7;
+            StudIDcomboBox.FormattingEnabled = true;
+            StudIDcomboBox.Location = new Point(30, 42);
+            StudIDcomboBox.Name = "StudIDcomboBox";
+            StudIDcomboBox.Size = new Size(274, 23);
+            StudIDcomboBox.TabIndex = 7;
             // 
-            // comboBox2
+            // UPDprogramcomboBox
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(30, 385);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(274, 23);
-            comboBox2.TabIndex = 8;
+            UPDprogramcomboBox.FormattingEnabled = true;
+            UPDprogramcomboBox.Location = new Point(30, 385);
+            UPDprogramcomboBox.Name = "UPDprogramcomboBox";
+            UPDprogramcomboBox.Size = new Size(274, 23);
+            UPDprogramcomboBox.TabIndex = 8;
             // 
-            // comboBox3
+            // UPDGenderComboBox
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(30, 327);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(274, 23);
-            comboBox3.TabIndex = 9;
+            UPDGenderComboBox.FormattingEnabled = true;
+            UPDGenderComboBox.Location = new Point(30, 327);
+            UPDGenderComboBox.Name = "UPDGenderComboBox";
+            UPDGenderComboBox.Size = new Size(274, 23);
+            UPDGenderComboBox.TabIndex = 9;
             // 
-            // textBox1
+            // UPDLast
             // 
-            textBox1.Location = new Point(30, 97);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(274, 23);
-            textBox1.TabIndex = 10;
+            UPDLast.Location = new Point(30, 97);
+            UPDLast.Name = "UPDLast";
+            UPDLast.Size = new Size(274, 23);
+            UPDLast.TabIndex = 10;
             // 
-            // textBox2
+            // UPDFirst
             // 
-            textBox2.Location = new Point(30, 156);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(274, 23);
-            textBox2.TabIndex = 11;
+            UPDFirst.Location = new Point(30, 156);
+            UPDFirst.Name = "UPDFirst";
+            UPDFirst.Size = new Size(274, 23);
+            UPDFirst.TabIndex = 11;
             // 
-            // textBox3
+            // UPDmid
             // 
-            textBox3.Location = new Point(30, 214);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(274, 23);
-            textBox3.TabIndex = 12;
+            UPDmid.Location = new Point(30, 214);
+            UPDmid.Name = "UPDmid";
+            UPDmid.Size = new Size(274, 23);
+            UPDmid.TabIndex = 12;
             // 
-            // textBox4
+            // UPDage
             // 
-            textBox4.Location = new Point(30, 272);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(274, 23);
-            textBox4.TabIndex = 13;
+            UPDage.Location = new Point(30, 272);
+            UPDage.Name = "UPDage";
+            UPDage.Size = new Size(274, 23);
+            UPDage.TabIndex = 13;
+            UPDage.TextChanged += textBox4_TextChanged;
             // 
             // button1
             // 
@@ -177,6 +178,7 @@
             button1.TabIndex = 14;
             button1.Text = "Confirm";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // FrmUpdateMember
             // 
@@ -186,13 +188,13 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(339, 514);
             Controls.Add(button1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(UPDage);
+            Controls.Add(UPDmid);
+            Controls.Add(UPDFirst);
+            Controls.Add(UPDLast);
+            Controls.Add(UPDGenderComboBox);
+            Controls.Add(UPDprogramcomboBox);
+            Controls.Add(StudIDcomboBox);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -202,6 +204,7 @@
             Controls.Add(label1);
             Name = "FrmUpdateMember";
             Text = "FrmUpdateMember";
+            Load += FrmUpdateMember_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -215,13 +218,13 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private ComboBox StudIDcomboBox;
+        private ComboBox UPDprogramcomboBox;
+        private ComboBox UPDGenderComboBox;
+        private TextBox UPDLast;
+        private TextBox UPDFirst;
+        private TextBox UPDmid;
+        private TextBox UPDage;
         private Button button1;
     }
 }

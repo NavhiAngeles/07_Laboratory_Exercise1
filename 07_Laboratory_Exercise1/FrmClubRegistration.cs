@@ -79,17 +79,6 @@ namespace _07_Laboratory_Exercise1
             ClearForm();
 
             RefreshListOfClubMembers();
-            /*ID = Registration();
-            StudentID = long.Parse(studIDtxt.Text);
-            LastName = LastNametxt.Text;
-            FirstName = FirstNametxt.Text;
-            MiddleName = MiddleNametxt.Text;
-            Age = int.Parse(Agetxt.Text);
-            Program = ProgcomboBox.Text;
-            Gender = gendercomboBox.Text;
-            clubRegistrationQuery.RegisterStudent(ID, StudentID, LastName, FirstName, MiddleName, Age, Program, Gender);
-
-            RefreshListOfClubMembers();*/
         }
         private void ClearForm()
         {
@@ -100,6 +89,13 @@ namespace _07_Laboratory_Exercise1
             Agetxt.Clear();
             gendercomboBox.SelectedIndex = -1;
             ProgcomboBox.SelectedIndex = -1;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmUpdateMember updateForm = new FrmUpdateMember();
+            updateForm.ShowDialog();
+            RefreshListOfClubMembers();
         }
     }
 }
