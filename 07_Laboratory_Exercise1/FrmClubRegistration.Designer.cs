@@ -270,6 +270,7 @@
             Controls.Add(panel1);
             Name = "FrmClubRegistration";
             Text = "Form1";
+            Load += this.FrmClubRegistration_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
