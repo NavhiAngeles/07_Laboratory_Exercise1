@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClubRegistration));
             panel1 = new Panel();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
-            textBox6 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            gendercomboBox = new ComboBox();
+            ProgcomboBox = new ComboBox();
+            Agetxt = new TextBox();
+            MiddleNametxt = new TextBox();
+            FirstNametxt = new TextBox();
+            LastNametxt = new TextBox();
+            studIDtxt = new TextBox();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -46,24 +46,24 @@
             label1 = new Label();
             panel2 = new Panel();
             button3 = new Button();
-            dataGridView1 = new DataGridView();
-            button1 = new Button();
+            DGVList = new DataGridView();
+            RegisterButton = new Button();
             button2 = new Button();
             label8 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DGVList).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(comboBox2);
-            panel1.Controls.Add(comboBox1);
-            panel1.Controls.Add(textBox6);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(gendercomboBox);
+            panel1.Controls.Add(ProgcomboBox);
+            panel1.Controls.Add(Agetxt);
+            panel1.Controls.Add(MiddleNametxt);
+            panel1.Controls.Add(FirstNametxt);
+            panel1.Controls.Add(LastNametxt);
+            panel1.Controls.Add(studIDtxt);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
@@ -76,56 +76,56 @@
             panel1.Size = new Size(678, 213);
             panel1.TabIndex = 0;
             // 
-            // comboBox2
+            // gendercomboBox
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(206, 167);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(166, 23);
-            comboBox2.TabIndex = 14;
+            gendercomboBox.FormattingEnabled = true;
+            gendercomboBox.Location = new Point(206, 167);
+            gendercomboBox.Name = "gendercomboBox";
+            gendercomboBox.Size = new Size(166, 23);
+            gendercomboBox.TabIndex = 14;
             // 
-            // comboBox1
+            // ProgcomboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(406, 40);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(238, 23);
-            comboBox1.TabIndex = 13;
+            ProgcomboBox.FormattingEnabled = true;
+            ProgcomboBox.Location = new Point(406, 40);
+            ProgcomboBox.Name = "ProgcomboBox";
+            ProgcomboBox.Size = new Size(238, 23);
+            ProgcomboBox.TabIndex = 13;
             // 
-            // textBox6
+            // Agetxt
             // 
-            textBox6.Location = new Point(26, 167);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(166, 23);
-            textBox6.TabIndex = 12;
+            Agetxt.Location = new Point(26, 167);
+            Agetxt.Name = "Agetxt";
+            Agetxt.Size = new Size(166, 23);
+            Agetxt.TabIndex = 12;
             // 
-            // textBox4
+            // MiddleNametxt
             // 
-            textBox4.Location = new Point(408, 100);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(166, 23);
-            textBox4.TabIndex = 10;
+            MiddleNametxt.Location = new Point(408, 100);
+            MiddleNametxt.Name = "MiddleNametxt";
+            MiddleNametxt.Size = new Size(166, 23);
+            MiddleNametxt.TabIndex = 10;
             // 
-            // textBox3
+            // FirstNametxt
             // 
-            textBox3.Location = new Point(206, 100);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(166, 23);
-            textBox3.TabIndex = 9;
+            FirstNametxt.Location = new Point(206, 100);
+            FirstNametxt.Name = "FirstNametxt";
+            FirstNametxt.Size = new Size(166, 23);
+            FirstNametxt.TabIndex = 9;
             // 
-            // textBox2
+            // LastNametxt
             // 
-            textBox2.Location = new Point(26, 100);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(166, 23);
-            textBox2.TabIndex = 8;
+            LastNametxt.Location = new Point(26, 100);
+            LastNametxt.Name = "LastNametxt";
+            LastNametxt.Size = new Size(166, 23);
+            LastNametxt.TabIndex = 8;
             // 
-            // textBox1
+            // studIDtxt
             // 
-            textBox1.Location = new Point(26, 41);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(166, 23);
-            textBox1.TabIndex = 7;
+            studIDtxt.Location = new Point(26, 41);
+            studIDtxt.Name = "studIDtxt";
+            studIDtxt.Size = new Size(166, 23);
+            studIDtxt.TabIndex = 7;
             // 
             // label7
             // 
@@ -200,7 +200,7 @@
             // panel2
             // 
             panel2.Controls.Add(button3);
-            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(DGVList);
             panel2.Location = new Point(12, 253);
             panel2.Name = "panel2";
             panel2.Size = new Size(823, 217);
@@ -217,23 +217,24 @@
             button3.Text = "Refresh";
             button3.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // DGVList
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(18, 14);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(660, 184);
-            dataGridView1.TabIndex = 0;
+            DGVList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DGVList.Location = new Point(18, 14);
+            DGVList.Name = "DGVList";
+            DGVList.Size = new Size(660, 184);
+            DGVList.TabIndex = 0;
             // 
-            // button1
+            // RegisterButton
             // 
-            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(704, 18);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 42);
-            button1.TabIndex = 2;
-            button1.Text = "Register";
-            button1.UseVisualStyleBackColor = true;
+            RegisterButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            RegisterButton.Location = new Point(704, 18);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(130, 42);
+            RegisterButton.TabIndex = 2;
+            RegisterButton.Text = "Register";
+            RegisterButton.UseVisualStyleBackColor = true;
+            RegisterButton.Click += button1_Click_1;
             // 
             // button2
             // 
@@ -265,16 +266,16 @@
             ClientSize = new Size(847, 493);
             Controls.Add(label8);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(RegisterButton);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "FrmClubRegistration";
             Text = "Form1";
-            Load += this.FrmClubRegistration_Load_1;
+            Load += FrmClubRegistration_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DGVList).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -282,13 +283,13 @@
         #endregion
 
         private Panel panel1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
-        private TextBox textBox6;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private ComboBox gendercomboBox;
+        private ComboBox ProgcomboBox;
+        private TextBox Agetxt;
+        private TextBox MiddleNametxt;
+        private TextBox FirstNametxt;
+        private TextBox LastNametxt;
+        private TextBox studIDtxt;
         private Label label7;
         private Label label6;
         private Label label5;
@@ -297,10 +298,10 @@
         private Label label2;
         private Label label1;
         private Panel panel2;
-        private Button button1;
+        private Button RegisterButton;
         private Button button2;
         private Button button3;
-        private DataGridView dataGridView1;
+        private DataGridView DGVList;
         private Label label8;
     }
 }

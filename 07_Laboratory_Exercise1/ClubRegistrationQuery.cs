@@ -32,7 +32,6 @@ namespace _07_Laboratory_Exercise1
             TrustServerCertificate=True;userid=angeles.i;password=12345";
             sqlConnect = new SqlConnection(connectionString);
             sqlCommand = new SqlCommand();
-            /*sqlAdapter = new SqlDataAdapter();*/
             dataTable = new DataTable();
             bindingSource = new BindingSource();
         }
