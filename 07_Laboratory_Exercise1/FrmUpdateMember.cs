@@ -92,7 +92,7 @@ namespace _07_Laboratory_Exercise1
                         UPDGenderComboBox.SelectedItem = row["Gender"].ToString();
                         UPDprogramcomboBox.SelectedItem = row["Program"].ToString();
 
-                        // Enable the update button now that we have a student selected
+                    
                         /*Updatebtn.Enabled = true;*/
                     }
                     else
@@ -119,7 +119,6 @@ namespace _07_Laboratory_Exercise1
                 return;
             }
 
-            // Validate required fields
             if (string.IsNullOrEmpty(UPDFirst.Text) ||
                 string.IsNullOrEmpty(UPDLast.Text) ||
                 string.IsNullOrEmpty(UPDage.Text) ||
@@ -130,7 +129,6 @@ namespace _07_Laboratory_Exercise1
                 return;
             }
 
-            // Validate age is a number
             if (!int.TryParse(UPDage.Text, out int age))
             {
                 MessageBox.Show("Please enter a valid age.");
@@ -152,7 +150,6 @@ namespace _07_Laboratory_Exercise1
                 {
                     MessageBox.Show("Student information updated successfully!");
 
-                    // Close the form
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
