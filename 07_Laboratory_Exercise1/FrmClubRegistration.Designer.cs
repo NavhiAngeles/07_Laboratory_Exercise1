@@ -48,7 +48,7 @@
             button3 = new Button();
             DGVList = new DataGridView();
             RegisterButton = new Button();
-            button2 = new Button();
+            Updatebtn = new Button();
             label8 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -236,16 +236,16 @@
             RegisterButton.UseVisualStyleBackColor = true;
             RegisterButton.Click += button1_Click_1;
             // 
-            // button2
+            // Updatebtn
             // 
-            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(704, 77);
-            button2.Name = "button2";
-            button2.Size = new Size(130, 42);
-            button2.TabIndex = 3;
-            button2.Text = "Update";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            Updatebtn.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Updatebtn.Location = new Point(704, 77);
+            Updatebtn.Name = "Updatebtn";
+            Updatebtn.Size = new Size(130, 42);
+            Updatebtn.TabIndex = 3;
+            Updatebtn.Text = "Update";
+            Updatebtn.UseVisualStyleBackColor = true;
+            Updatebtn.Click += button2_Click;
             // 
             // label8
             // 
@@ -266,7 +266,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(847, 493);
             Controls.Add(label8);
-            Controls.Add(button2);
+            Controls.Add(Updatebtn);
             Controls.Add(RegisterButton);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -300,7 +300,7 @@
         private Label label1;
         private Panel panel2;
         private Button RegisterButton;
-        private Button button2;
+        private Button Updatebtn;
         private Button button3;
         private DataGridView DGVList;
         private Label label8;

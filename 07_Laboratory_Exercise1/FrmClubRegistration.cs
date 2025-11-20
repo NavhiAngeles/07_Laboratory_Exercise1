@@ -94,8 +94,11 @@ namespace _07_Laboratory_Exercise1
         private void button2_Click(object sender, EventArgs e)
         {
             FrmUpdateMember updateForm = new FrmUpdateMember();
-            updateForm.ShowDialog();
-            RefreshListOfClubMembers();
+            DialogResult result = updateForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                RefreshListOfClubMembers();
+            }
         }
     }
 }
